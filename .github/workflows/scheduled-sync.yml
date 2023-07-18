@@ -5,7 +5,7 @@ name: Sync Data on Schedule
 on:
   schedule:
   - cron: '* * * * *'
-  workflow-dispatch:
+  workflow_dispatch:
 
 concurrency:
   group: main-${{ github.ref }}
