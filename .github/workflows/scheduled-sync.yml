@@ -5,6 +5,7 @@ name: Sync Data on Schedule
 on:
   schedule:
   - cron: '* * * * *'
+  workflow-dispatch:
 
 concurrency:
   group: main-${{ github.ref }}
@@ -55,7 +56,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Sync data with remote sources
-          
+
       - name: "Run if changes have been detected"
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: git show --name-only
