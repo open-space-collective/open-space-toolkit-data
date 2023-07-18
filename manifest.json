@@ -19,8 +19,8 @@
                 "url": "https://storage.googleapis.com/loft-orbital-open-space-toolkit/physics/coordinate/frame/providers/iers/latest/ser7.dat"
             }
         ],
-        "last_update": "2023-07-18T23:04:40.183558+00:00",
-        "next_update": "2023-06-19T00:04:40.183577+00:00",
+        "last_update": "2023-07-18T23:58:08.734781+00:00",
+        "next_update": "2023-07-19T00:58:08.734799+00:00",
         "update_frequency_s": 3600
     },
     "finals_2000a": {
