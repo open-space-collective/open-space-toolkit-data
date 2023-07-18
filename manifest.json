@@ -7,8 +7,32 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2023-07-18T22:08:34.381694+00:00",
-        "next_update": "2023-07-18T23:08:34.381715+00:00",
+        "last_update": "2023-07-18T23:04:39.957993+00:00",
+        "next_update": "2023-07-19T00:04:39.958011+00:00",
+        "update_frequency_s": 3600
+    },
+    "bulletinA": {
+        "path": "coordinate/frame/providers/iers/bulletin-A",
+        "filename": "ser7.dat",
+        "remote_sources": [
+            {
+                "url": "https://storage.googleapis.com/loft-orbital-open-space-toolkit/physics/coordinate/frame/providers/iers/latest/ser7.dat"
+            }
+        ],
+        "last_update": "2023-07-18T23:04:40.183558+00:00",
+        "next_update": "2023-07-19T00:04:40.183577+00:00",
+        "update_frequency_s": 3600
+    },
+    "finals_2000a": {
+        "path": "coordinate/frame/providers/iers/finals-2000A",
+        "filename": "finals2000A.data",
+        "remote_sources": [
+            {
+                "url": "https://storage.googleapis.com/loft-orbital-open-space-toolkit/physics/coordinate/frame/providers/iers/latest/finals2000A.data"
+            }
+        ],
+        "last_update": "2023-07-18T23:04:40.353533+00:00",
+        "next_update": "2023-07-19T00:04:40.353552+00:00",
         "update_frequency_s": 3600
     }
 }
