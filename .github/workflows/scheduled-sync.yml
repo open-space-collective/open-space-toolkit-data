@@ -1,6 +1,6 @@
 # Apache License 2.0
 
-name: Sync Data with Remote Sources
+name: Sync Data on Schedule
 
 on:
   schedule:
@@ -51,3 +51,15 @@ jobs:
           lfs: true
       - name: Pull Data
         run: make pull-data
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Sync data with remote sources
+          
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: git show --name-only
+
+      - name: "Run if no changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        run: echo "No Changes!"
