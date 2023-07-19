@@ -4,7 +4,7 @@ name: Sync Data on Schedule
 
 on:
   schedule:
-  - cron: '* * * * *'
+  - cron: '0 */12 * * *'
   workflow_dispatch:
 
 concurrency:
