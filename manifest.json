@@ -8,8 +8,8 @@
             }
         ],
         "last_update": "2023-07-19T00:18:39.100386+00:00",
-        "next_update": "2023-07-19T01:18:39.100406+00:00",
-        "update_frequency_s": 3600
+        "next_update": "2023-07-19T12:18:39.100406+00:00",
+        "update_frequency_s": 43200
     },
     "bulletinA": {
         "path": "coordinate/frame/providers/iers/bulletin-A",
@@ -20,8 +20,8 @@
             }
         ],
         "last_update": "2023-07-18T23:58:08.734781+00:00",
-        "next_update": "2023-07-19T00:58:08.734799+00:00",
-        "update_frequency_s": 3600
+        "next_update": "2023-12-19T00:58:08.734799+00:00",
+        "update_frequency_s": 15811200
     },
     "finals_2000a": {
         "path": "coordinate/frame/providers/iers/finals-2000A",
@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2023-07-19T00:18:39.517353+00:00",
-        "next_update": "2023-07-19T01:18:39.517374+00:00",
-        "update_frequency_s": 3600
+        "next_update": "2023-12-19T01:18:39.517374+00:00",
+        "update_frequency_s": 15811200
     }
 }
