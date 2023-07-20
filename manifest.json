@@ -7,9 +7,9 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2023-07-20T01:11:20.184006+00:00",
-        "next_update": "2023-07-20T13:11:20.184026+00:00",
-        "update_frequency_s": 43200
+        "last_update_check": "2023-07-20T20:53:03.085904+00:00",
+        "next_update_check": "2023-07-21T08:53:03.085924+00:00",
+        "check_frequency_s": 43200
     },
     "bulletinA": {
         "path": "coordinate/frame/providers/iers/bulletin-A",
@@ -19,9 +19,9 @@
                 "url": "https://storage.googleapis.com/loft-orbital-open-space-toolkit/physics/coordinate/frame/providers/iers/latest/ser7.dat"
             }
         ],
-        "last_update": "2023-07-18T23:58:08.734781+00:00",
-        "next_update": "2023-12-19T00:58:08.734799+00:00",
-        "update_frequency_s": 15811200
+        "last_update_check": "2023-07-18T23:58:08.734781+00:00",
+        "next_update_check": "2023-12-19T00:58:08.734799+00:00",
+        "check_frequency_s": 15811200
     },
     "finals_2000a": {
         "path": "coordinate/frame/providers/iers/finals-2000A",
@@ -31,8 +31,110 @@
                 "url": "https://storage.googleapis.com/loft-orbital-open-space-toolkit/physics/coordinate/frame/providers/iers/latest/finals2000A.data"
             }
         ],
-        "last_update": "2023-07-19T00:18:39.517353+00:00",
-        "next_update": "2023-12-19T01:18:39.517374+00:00",
-        "update_frequency_s": 15811200
+        "last_update_check": "2023-07-19T00:18:39.517353+00:00",
+        "next_update_check": "2023-12-19T01:18:39.517374+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_planetary_ephemeris": {
+        "path": "environment/ephemerides/spice",
+        "filename": "de_430.bsp",
+        "file_meta": "Planetary ephemeris for all planets in the Solar System (+ Sun + The Moon). See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/aareadme_de430-de431.txt",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:16:48.408774+00:00",
+        "next_update_check": "2024-07-19T22:23:28.408814+00:00",
+        "check_frequency_s": 31540000
+    },
+    "SPICE_earth_orientation_low_precision": {
+        "path": "environment/ephemerides/spice",
+        "filename": "earth_200101_990825_predict.bpc",
+        "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.bpc"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:16:55.491918+00:00",
+        "next_update_check": "2024-01-19T21:16:55.491938+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_earth_ITRF_association": {
+        "path": "environment/ephemerides/spice",
+        "filename": "earth_assoc_itrf93.tf",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/fk/planets/earth_assoc_itrf93.tf"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:16:58.612582+00:00",
+        "next_update_check": "2024-01-19T21:16:58.612608+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_lunar_reference_frame_specification": {
+        "path": "environment/ephemerides/spice",
+        "filename": "moon_080317.tf",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/LADEE/kernels/fk/moon_080317.tf"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:16:59.758096+00:00",
+        "next_update_check": "2024-01-19T21:16:59.758121+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_lunar_ME_association": {
+        "path": "environment/ephemerides/spice",
+        "filename": "moon_assoc_me.tf",
+        "file_meta": "Associate the Moon to the Mean Earth (ME) Frame. See comments in file.",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/LADEE/kernels/fk/moon_assoc_me.tf"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:17:00.785883+00:00",
+        "next_update_check": "2024-01-19T21:17:00.785910+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_lunar_orientation_high_precision": {
+        "path": "environment/ephemerides/spice",
+        "filename": "moon_assoc_me.tf",
+        "file_meta": "High precision lunar orientation kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.cmt",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.bpc"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:17:01.799236+00:00",
+        "next_update_check": "2024-01-19T21:17:01.799261+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_leap_seconds_kernel": {
+        "path": "environment/ephemerides/spice",
+        "filename": "latest_leapseconds.tls",
+        "file_meta": "Leapseconds added since 1972. See comments in file.",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/latest_leapseconds.tls"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:17:02.696112+00:00",
+        "next_update_check": "2024-01-19T21:17:02.696132+00:00",
+        "check_frequency_s": 15811200
+    },
+    "SPICE_generic_body_kernel": {
+        "path": "environment/ephemerides/spice",
+        "filename": "pck00010.tpc",
+        "file_meta": "Body size/shape for natural bodies. See comments in file.",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc"
+            }
+        ],
+        "last_update_check": "2023-07-20T21:17:03.636189+00:00",
+        "next_update_check": "2024-01-19T21:17:03.636209+00:00",
+        "check_frequency_s": 15811200
     }
 }

@@ -22,19 +22,19 @@ def update(descriptor):
             # already exists but has not changed
             if filecmp.cmp(current_file, new_file):
                 new_file.unlink()
-                print("No changes detected in " + descriptor["filename"])
+                print(f"No changes detected in {descriptor['filename']}")
             else:
                 current_file.unlink()
                 new_file.rename(current_file)
-                print("Updated " + descriptor["filename"])
+                print(f"Changes detected in { descriptor['filename']}. Updated file.")
 
         else:
             new_file.rename(current_file)
-            print("Downloaded new file" + descriptor["filename"])
+            print(f"{descriptor['filename']} was not present. Downloaded new copy.")
 
         # update manifest
-        descriptor["last_update"] = datetime.now(timezone.utc).isoformat()
-        descriptor["next_update"] = (datetime.now(timezone.utc) + timedelta(seconds=descriptor["update_frequency_s"])).isoformat()
+        descriptor["last_update_check"] = datetime.now(timezone.utc).isoformat()
+        descriptor["next_update_check"] = (datetime.now(timezone.utc) + timedelta(seconds=descriptor["check_frequency_s"])).isoformat()
 
         return descriptor
 
@@ -44,13 +44,16 @@ with open("manifest.json") as manifest_file:
 
 for resource, descriptor in manifest.items():
 
-    if datetime.fromisoformat(descriptor["next_update"]) < datetime.now(timezone.utc):
+    next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
+
+    if next_update_check_dt < datetime.now(timezone.utc):
         
-        print("Downloading " + resource + "...")
+        print(f"Fetching {resource} to check for updates...")
         manifest[resource] = update(descriptor)
 
     else:
-        print("Skipping " + resource + "...")
+        print(f"Not checking {resource}.")
+        print(f"  > Next check in {(next_update_check_dt - datetime.now(timezone.utc))}.")
 
 
 with open("manifest.json", "w") as manifest_file:
