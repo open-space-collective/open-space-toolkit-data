@@ -9,13 +9,15 @@ Data for the space environment automatically fetched using Github Actions.
 
 ## Getting Started
 
-You can clone this repository and run the data fetching yourself *requires Docker*. 
+You can clone this repository and run the data fetching yourself. [*requires Docker*]. 
 
 ```bash
 make pull-data
 ```
 
 However since the data is update periodically on the remote, a regular 'ole `git pull` should be sufficient to keep you updated!
+
+If you really want to see it in action, feel free to delete the entire `data` directory and run `make pull-data` again.
 
 ## Setup
 
@@ -29,6 +31,12 @@ To start the development environment:
 ```bash
 make start-development
 ```
+
+## Adding New Data
+TODO: explain manifest, compression, and multiple files/data sources
+TODO: mention how to add with git LFS, use `du -sh` to check size. > 1MB should probably use LFS
+- You must create any neccesary subdirectories yourself
+- Run `make pull-data` to verify that your manifest configuration is correct.
 
 ## Contribution
 
