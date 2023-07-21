@@ -5,6 +5,7 @@ import tarfile
 from urllib import request
 from pathlib import Path
 import shutil
+from durations import Duration
 
 def download_check_and_update(descriptor):
 
@@ -35,14 +36,17 @@ def download_check_and_update(descriptor):
             
         # Compare files to assess updates
         for filename in filenames:
-            compare_files_and_update(data_folder, staging_folder, filename)
+            updated = compare_files_and_update(data_folder, staging_folder, filename)
+
+            if updated:
+                descriptor["last_update"] = datetime.now(timezone.utc).isoformat()
 
         # remove staging folder
         shutil.rmtree(staging_folder)
 
-        # update manifest
-        descriptor["last_update_check"] = datetime.now(timezone.utc).isoformat()
-        descriptor["next_update_check"] = (datetime.now(timezone.utc) + timedelta(seconds=descriptor["check_frequency_s"])).isoformat()
+        # update next check time
+        duration_td = timedelta(seconds=Duration(descriptor["check_frequency"]).to_seconds())
+        descriptor["next_update_check"] = (datetime.now(timezone.utc) + duration_td).isoformat()
 
         return descriptor
 
@@ -55,14 +59,17 @@ def compare_files_and_update(current_dir, new_dir, filename):
         if filecmp.cmp(current_file, new_file):
             new_file.unlink()
             print(f"No changes detected in {descriptor['filenames']}")
+            return False
         else:
             current_file.unlink()
             new_file.rename(current_file)
             print(f"Changes detected in { descriptor['filenames']}. Updated file.")
+            return True
 
     else:
         new_file.rename(current_file)
         print(f"{descriptor['filenames']} was not present. Downloaded new copy.")
+        return True
 
 def unpack(compressed_file):
     tar = tarfile.open(compressed_file)
@@ -84,11 +91,14 @@ def flatten(root_directory):
 with open("manifest.json") as manifest_file:
     manifest = json.load(manifest_file)
 
+
+force_check = False # argv[1] == "force" if len(sys.argv) > 1 else False
+
 for resource, descriptor in manifest.items():
 
     next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
 
-    if next_update_check_dt < datetime.now(timezone.utc):
+    if next_update_check_dt < datetime.now(timezone.utc) or force_check:
         
         print(f"Fetching {resource} to check for updates...")
         manifest[resource] = download_check_and_update(descriptor)
