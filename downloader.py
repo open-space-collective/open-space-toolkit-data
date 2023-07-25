@@ -39,14 +39,14 @@ def download_check_and_update(descriptor):
             updated = compare_files_and_update(data_folder, staging_folder, filename)
 
             if updated:
-                descriptor["last_update"] = datetime.now(timezone.utc).isoformat()
+                descriptor["last_update"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "")
 
         # remove staging folder
         shutil.rmtree(staging_folder)
 
         # update next check time
         duration_td = timedelta(seconds=Duration(descriptor["check_frequency"]).to_seconds())
-        descriptor["next_update_check"] = (datetime.now(timezone.utc) + duration_td).isoformat()
+        descriptor["next_update_check"] = (datetime.now(timezone.utc) + duration_td).isoformat().replace("+00:00", "")
 
         return descriptor
 
