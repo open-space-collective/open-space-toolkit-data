@@ -98,14 +98,14 @@ for resource, descriptor in manifest.items():
 
     next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
 
-    if next_update_check_dt < datetime.now(timezone.utc) or force_check:
+    if next_update_check_dt.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc) or force_check:
         
         print(f"Fetching {resource} to check for updates...")
         manifest[resource] = download_check_and_update(descriptor)
 
     else:
         print(f"Not checking {resource}.")
-        print(f"  > Next check in {(next_update_check_dt - datetime.now(timezone.utc))}.")
+        print(f"  > Next check in {(next_update_check_dt.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc))}.")
 
 
 with open("manifest.json", "w") as manifest_file:
