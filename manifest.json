@@ -11,7 +11,7 @@
         "next_update_check": "2023-07-27T01:02:48.375049",
         "check_frequency": "6 hours"
     },
-    "bulletinA": {
+    "bulletin-A": {
         "path": "coordinate/frame/providers/iers/bulletin-A",
         "filenames": "ser7.dat",
         "remote_sources": [
@@ -27,7 +27,7 @@
         "next_update_check": "2023-07-27T19:11:24.287344",
         "check_frequency": "1 day"
     },
-    "finals_2000a": {
+    "finals-2000A": {
         "path": "coordinate/frame/providers/iers/finals-2000A",
         "filenames": "finals2000A.data",
         "remote_sources": [
