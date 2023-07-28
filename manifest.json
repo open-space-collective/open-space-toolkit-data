@@ -7,8 +7,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2023-07-27T12:02:05.190265",
-        "next_update_check": "2023-07-27T18:02:05.191101",
+        "last_update": "2023-07-28T00:03:32.231986",
+        "next_update_check": "2023-07-28T06:03:32.232931",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -23,8 +23,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2023-07-26T19:11:24.287073",
-        "next_update_check": "2023-07-27T19:11:24.287344",
+        "last_update": "2023-07-28T00:03:32.865972",
+        "next_update_check": "2023-07-29T00:03:32.866701",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
