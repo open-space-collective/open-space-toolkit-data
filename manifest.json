@@ -7,8 +7,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2023-08-02T12:02:04.268797",
-        "next_update_check": "2023-08-02T18:02:04.269214",
+        "last_update": "2023-08-03T00:03:14.101998",
+        "next_update_check": "2023-08-03T06:03:14.102540",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -39,8 +39,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2023-07-26T19:11:25.975794",
-        "next_update_check": "2023-08-02T19:11:25.976023",
+        "last_update": "2023-08-03T00:03:15.288325",
+        "next_update_check": "2023-08-10T00:03:15.288843",
         "check_frequency": "1 week"
     },
     "earth_gravity_EGM2008": {
