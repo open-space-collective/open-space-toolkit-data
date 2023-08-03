@@ -33,6 +33,6 @@ pull-data: build
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir="/app" \
 		"open-space-toolkit-data:latest" \
-		/bin/bash -c "python3.11 /app/downloader.py"
+		/bin/bash -c "python3.11 /app/downloader.py $(FORCE)"
 
 .PHONY: start-development

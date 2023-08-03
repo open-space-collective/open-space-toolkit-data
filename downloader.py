@@ -1,3 +1,5 @@
+import sys
+
 from datetime import datetime, timezone, timedelta
 import json
 import filecmp
@@ -92,11 +94,13 @@ with open("manifest.json") as manifest_file:
     manifest = json.load(manifest_file)
 
 
-force_check = False # argv[1] == "force" if len(sys.argv) > 1 else False
+force_check_pattern = sys.argv[1] if len(sys.argv) > 1 else None
 
 for resource, descriptor in manifest.items():
 
     next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
+
+    force_check = force_check_pattern is not None and force_check_pattern in resource
 
     if next_update_check_dt.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc) or force_check:
         

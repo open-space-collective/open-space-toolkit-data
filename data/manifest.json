@@ -1,5 +1,5 @@
 {
-    "space_weather_CSSI": {
+    "space-weather-CSSI": {
         "path": "environment/atmospheric/earth/CSSISpaceWeather",
         "filenames": "SW-Last5Years.csv",
         "remote_sources": [
@@ -43,7 +43,7 @@
         "next_update_check": "2023-08-10T00:03:15.288843",
         "check_frequency": "1 week"
     },
-    "earth_gravity_EGM2008": {
+    "earth-gravity-EGM2008": {
         "path": "environment/gravitational/earth",
         "filenames": [
             "egm2008.egm",
@@ -59,7 +59,7 @@
         "next_update_check": "2024-01-20T01:02:00.498151",
         "check_frequency": "3 months"
     },
-    "earth_gravity_WGS84": {
+    "earth-gravity-WGS84": {
         "path": "environment/gravitational/earth",
         "filenames": [
             "wgs84.egm",
@@ -75,7 +75,7 @@
         "next_update_check": "2024-01-20T01:02:01.186915",
         "check_frequency": "3 months"
     },
-    "SPICE_planetary_ephemeris": {
+    "planetary-ephemeris-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "de430.bsp",
         "file_meta": "Planetary ephemeris for all planets in the Solar System (+ Sun + The Moon). See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/aareadme_de430-de431.txt",
@@ -85,10 +85,10 @@
             }
         ],
         "last_update": "2023-07-20T21:16:48.408774",
-        "next_update_check": "2024-07-21T01:02:02.686674",
+        "next_update_check": "2024-07-27T17:50:15.272558",
         "check_frequency": "1 year"
     },
-    "SPICE_earth_orientation_low_precision": {
+    "earth-orientation-low-precision-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "earth_200101_990825_predict.bpc",
         "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
@@ -98,10 +98,10 @@
             }
         ],
         "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2024-01-20T01:02:03.164085",
+        "next_update_check": "2023-10-27T05:50:19.054576",
         "check_frequency": "3 months"
     },
-    "SPICE_earth_ITRF_association": {
+    "earth-ITRF-association-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "earth_assoc_itrf93.tf",
         "remote_sources": [
@@ -110,10 +110,10 @@
             }
         ],
         "last_update": "2023-07-20T21:16:58.612582",
-        "next_update_check": "2024-01-20T01:02:03.315419",
+        "next_update_check": "2023-10-27T05:50:22.946468",
         "check_frequency": "3 months"
     },
-    "SPICE_lunar_reference_frame_specification": {
+    "lunar-reference-frame-specification-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "moon_080317.tf",
         "remote_sources": [
@@ -122,10 +122,10 @@
             }
         ],
         "last_update": "2023-07-20T21:16:59.758096",
-        "next_update_check": "2024-01-20T01:02:03.499240",
+        "next_update_check": "2023-10-27T05:50:28.727258",
         "check_frequency": "3 months"
     },
-    "SPICE_lunar_ME_association": {
+    "lunar-ME-association-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "moon_assoc_me.tf",
         "file_meta": "Associate the Moon to the Mean Earth (ME) Frame. See comments in file.",
@@ -135,10 +135,10 @@
             }
         ],
         "last_update": "2023-07-20T21:17:00.785883",
-        "next_update_check": "2024-01-20T01:02:03.646782",
+        "next_update_check": "2023-10-27T05:50:31.740472",
         "check_frequency": "3 months"
     },
-    "SPICE_lunar_orientation_high_precision": {
+    "lunar-orientation-high-precision-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "moon_pa_de421_1900-2050.bpc",
         "file_meta": "High precision lunar orientation kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.cmt",
@@ -148,10 +148,10 @@
             }
         ],
         "last_update": "2023-07-20T21:17:01.799236",
-        "next_update_check": "2024-01-20T01:02:03.980218",
+        "next_update_check": "2023-10-27T05:50:34.318908",
         "check_frequency": "3 months"
     },
-    "SPICE_leap_seconds_kernel": {
+    "leap-seconds-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "latest_leapseconds.tls",
         "file_meta": "Leapseconds added since 1972. See comments in file.",
@@ -161,10 +161,10 @@
             }
         ],
         "last_update": "2023-07-20T21:17:02.696112",
-        "next_update_check": "2024-01-20T01:02:04.128277",
+        "next_update_check": "2023-10-27T05:50:36.562901",
         "check_frequency": "3 months"
     },
-    "SPICE_generic_body_kernel": {
+    "generic-body-specification-SPICE": {
         "path": "environment/ephemerides/spice",
         "filenames": "pck00010.tpc",
         "file_meta": "Body size/shape for natural bodies. See comments in file.",
@@ -174,7 +174,7 @@
             }
         ],
         "last_update": "2023-07-21T01:02:04.354277",
-        "next_update_check": "2024-01-20T01:02:04.354781",
+        "next_update_check": "2023-10-27T05:50:38.017073",
         "check_frequency": "3 months"
     }
 }
