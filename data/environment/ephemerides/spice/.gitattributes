@@ -1,3 +1,0 @@
-de430.bsp filter=lfs diff=lfs merge=lfs -text
-earth_200101_990825_predict.bpc filter=lfs diff=lfs merge=lfs -text
-moon_pa_de421_1900-2050.bpc filter=lfs diff=lfs merge=lfs -text
