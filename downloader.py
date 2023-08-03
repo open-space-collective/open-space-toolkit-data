@@ -90,7 +90,7 @@ def flatten(root_directory):
 ##
 ## MAIN
 ##
-with open("manifest.json") as manifest_file:
+with open("data/manifest.json") as manifest_file:
     manifest = json.load(manifest_file)
 
 
@@ -112,5 +112,5 @@ for resource, descriptor in manifest.items():
         print(f"  > Next check in {(next_update_check_dt.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc))}.")
 
 
-with open("manifest.json", "w") as manifest_file:
+with open("data/manifest.json", "w") as manifest_file:
     json.dump(manifest, manifest_file, indent=4)
