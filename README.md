@@ -6,10 +6,9 @@
 
 Data for the space environment automatically fetched using Github Actions.
 
-
 ## Getting Started
 
-You can clone this repository and run the data fetching yourself. [*requires Docker*]. 
+You can clone this repository and run the data fetching yourself. [*requires Docker*].
 
 ```bash
 make pull-data
