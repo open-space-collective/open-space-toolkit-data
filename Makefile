@@ -1,5 +1,6 @@
+# Apache License 2.0
 
-build: 
+build:
 
 	@ echo "Building development image..."
 
