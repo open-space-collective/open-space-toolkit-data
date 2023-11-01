@@ -111,36 +111,47 @@ def flatten(root_directory):
         file.rename(new_path)
 
 
-with open("data/manifest.json") as manifest_file:
-    manifest = json.load(manifest_file)
+def main():
+    with open("data/manifest.json") as manifest_file:
+        manifest = json.load(manifest_file)
+
+    force_check_pattern = sys.argv[1] if len(sys.argv) > 1 else None
+
+    # Use manifest check frequency as a global throttle on checking for updates.
+    manifest_next_update_check_dt = datetime.fromisoformat(manifest["manifest"]["next_update_check"])
+
+    if manifest_next_update_check_dt.replace(tzinfo=timezone.utc) > datetime.now(timezone.utc) and force_check_pattern is None:
+        print("Global update frequency not yet reached. Nothing to do.")
+        return
+
+    for resource, descriptor in manifest.items():
+
+        if resource == "manifest":
+            # Just log a manifest update. Nothing to try and download.
+            print("Updating manifest timestamps.")
+            manifest["manifest"] = set_update_timestamps(descriptor=manifest["manifest"], updated=True)
+            continue
+
+        next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
+
+        force_check = force_check_pattern is not None and force_check_pattern in resource
+
+        if (
+            next_update_check_dt.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
+            or force_check
+        ):
+            print(f"Fetching {resource} to check for updates...")
+            manifest[resource] = download_check_and_update(descriptor)
+
+        else:
+            print(f"Not checking {resource}.")
+            print(
+                f"  > Next check in {(next_update_check_dt.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc))}."
+            )
+
+    with open("data/manifest.json", "w") as manifest_file:
+        json.dump(manifest, manifest_file, indent=4)
 
 
-force_check_pattern = sys.argv[1] if len(sys.argv) > 1 else None
-
-for resource, descriptor in manifest.items():
-
-    if resource == "manifest":
-        continue
-
-    next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
-
-    force_check = force_check_pattern is not None and force_check_pattern in resource
-
-    if (
-        next_update_check_dt.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
-        or force_check
-    ):
-        print(f"Fetching {resource} to check for updates...")
-        manifest[resource] = download_check_and_update(descriptor)
-
-    else:
-        print(f"Not checking {resource}.")
-        print(
-            f"  > Next check in {(next_update_check_dt.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc))}."
-        )
-
-# Always log a manifest update
-manifest["manifest"] = set_update_timestamps(descriptor=manifest["manifest"], updated=True)
-
-with open("data/manifest.json", "w") as manifest_file:
-    json.dump(manifest, manifest_file, indent=4)
+if __name__ == '__main__':
+    main()
