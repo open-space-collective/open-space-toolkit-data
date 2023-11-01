@@ -19,12 +19,15 @@ def set_update_timestamps(descriptor: dict, updated: bool):
         )
 
     # increment next check time by check_frequency
-    duration_td = timedelta(seconds=Duration(descriptor["check_frequency"]).to_seconds())
+    duration_td = timedelta(
+        seconds=Duration(descriptor["check_frequency"]).to_seconds()
+    )
     descriptor["next_update_check"] = (
         (datetime.now(timezone.utc) + duration_td).isoformat().replace("+00:00", "")
     )
 
     return descriptor
+
 
 def download_check_and_update(descriptor):
     data_folder = Path("data") / Path(descriptor["path"])
@@ -62,7 +65,9 @@ def download_check_and_update(descriptor):
     updated = False
 
     for filename in filenames:
-        updated = updated or compare_files_and_update(data_folder, staging_folder, filename)
+        updated = updated or compare_files_and_update(
+            data_folder, staging_folder, filename
+        )
 
     # Remove staging folder
     shutil.rmtree(staging_folder)
@@ -103,7 +108,9 @@ def unpack(compressed_file):
 
 def flatten(root_directory):
     all_subfiles = [
-        path_object for path_object in root_directory.rglob("*") if path_object.is_file()
+        path_object
+        for path_object in root_directory.rglob("*")
+        if path_object.is_file()
     ]
 
     for file in all_subfiles:
@@ -118,26 +125,36 @@ def main():
     force_check_pattern = sys.argv[1] if len(sys.argv) > 1 else None
 
     # Use manifest check frequency as a global throttle on checking for updates.
-    manifest_next_update_check_dt = datetime.fromisoformat(manifest["manifest"]["next_update_check"])
+    manifest_next_update_check_dt = datetime.fromisoformat(
+        manifest["manifest"]["next_update_check"]
+    )
 
-    if manifest_next_update_check_dt.replace(tzinfo=timezone.utc) > datetime.now(timezone.utc) and force_check_pattern is None:
+    if (
+        manifest_next_update_check_dt.replace(tzinfo=timezone.utc)
+        > datetime.now(timezone.utc)
+        and force_check_pattern is None
+    ):
         print("Global update frequency not yet reached. Nothing to do.")
         return
 
     for resource, descriptor in manifest.items():
-
         if resource == "manifest":
             # Just log a manifest update. Nothing to try and download.
             print("Updating manifest timestamps.")
-            manifest["manifest"] = set_update_timestamps(descriptor=manifest["manifest"], updated=True)
+            manifest["manifest"] = set_update_timestamps(
+                descriptor=manifest["manifest"], updated=True
+            )
             continue
 
         next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
 
-        force_check = force_check_pattern is not None and force_check_pattern in resource
+        force_check = (
+            force_check_pattern is not None and force_check_pattern in resource
+        )
 
         if (
-            next_update_check_dt.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
+            next_update_check_dt.replace(tzinfo=timezone.utc)
+            < datetime.now(timezone.utc)
             or force_check
         ):
             print(f"Fetching {resource} to check for updates...")
@@ -153,5 +170,5 @@ def main():
         json.dump(manifest, manifest_file, indent=4)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

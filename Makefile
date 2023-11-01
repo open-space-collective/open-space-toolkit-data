@@ -11,7 +11,7 @@ build:
 
 .PHONY: build
 
-start-development: build
+start-development dev: build
 	@ echo "Starting development environment..."
 
 	docker run \
