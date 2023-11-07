@@ -86,17 +86,17 @@ def compare_files_and_update(current_dir, new_dir, filename):
     if current_file.exists():
         if filecmp.cmp(current_file, new_file):
             new_file.unlink()
-            print(f"No changes detected in {descriptor['filenames']}")
+            print(f"No changes detected in {filename}")
             return False
         else:
             current_file.unlink()
             new_file.rename(current_file)
-            print(f"Changes detected in { descriptor['filenames']}. Updated file.")
+            print(f"Changes detected in {filename}. Updated file.")
             return True
 
     else:
         new_file.rename(current_file)
-        print(f"{descriptor['filenames']} was not present. Downloaded new copy.")
+        print(f"{filename} was not present. Downloaded new copy.")
         return True
 
 
