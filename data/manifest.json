@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2023-11-03T17:50:55.269594",
-        "next_update_check": "2023-11-03T23:50:55.269647",
+        "last_update": "2023-11-07T21:11:27.904536",
+        "next_update_check": "2023-11-08T03:11:27.904603",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2023-11-03T12:02:29.422729",
-        "next_update_check": "2023-11-03T18:02:29.423296",
+        "last_update": "2023-11-07T21:11:28.503768",
+        "next_update_check": "2023-11-08T03:11:28.503887",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2023-11-03T12:02:30.386938",
-        "next_update_check": "2023-11-04T12:02:30.387515",
+        "next_update_check": "2023-11-08T21:11:29.255674",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -47,8 +47,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2023-10-30T00:03:25.808549",
-        "next_update_check": "2023-11-06T00:03:25.809257",
+        "last_update": "2023-11-07T21:11:30.467062",
+        "next_update_check": "2023-11-14T21:11:30.467151",
         "check_frequency": "1 week"
     },
     "earth-gravity-EGM84": {
@@ -262,8 +262,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2023-08-04T23:42:27.708064",
-        "next_update_check": "2023-11-04T11:42:27.708303",
+        "last_update": "2023-11-07T21:11:31.387076",
+        "next_update_check": "2024-02-07T09:11:31.387200",
         "check_frequency": "3 months"
     },
     "earth_assoc_itrf93.tf": {
@@ -354,7 +354,7 @@
             }
         ],
         "last_update": "2023-08-04T23:09:52.388112",
-        "next_update_check": "2023-11-04T11:09:52.388627",
+        "next_update_check": "2024-02-07T09:11:31.955436",
         "check_frequency": "3 months"
     }
 }
