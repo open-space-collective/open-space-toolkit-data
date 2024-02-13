@@ -20,7 +20,7 @@
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
-        "path": "coordinate/frame/providers/iers/bulletin-A",
+        "path": "coordinate/frame/provider/iers/bulletin-A",
         "filenames": "ser7.dat",
         "remote_sources": [
             {
@@ -36,7 +36,7 @@
         "check_frequency": "1 day"
     },
     "finals-2000A": {
-        "path": "coordinate/frame/providers/iers/finals-2000A",
+        "path": "coordinate/frame/provider/iers/finals-2000A",
         "filenames": "finals2000A.data",
         "remote_sources": [
             {
@@ -228,7 +228,7 @@
         "check_frequency": "6 months"
     },
     "de430.bsp": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "de430.bsp",
         "file_meta": "SPICE kernel for planetary ephemeris for all planets in the Solar System (+ Sun + The Moon). See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/aareadme_de430-de431.txt",
         "remote_sources": [
@@ -241,7 +241,7 @@
         "check_frequency": "1 year"
     },
     "earth_200101_990825_predict.bpc": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "earth_200101_990825_predict.bpc",
         "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
         "remote_sources": [
@@ -254,7 +254,7 @@
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "earth_latest_high_prec.bpc",
         "file_meta": "High precision historical earth orientation kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.cmt",
         "remote_sources": [
@@ -267,7 +267,7 @@
         "check_frequency": "3 months"
     },
     "earth_assoc_itrf93.tf": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "earth_assoc_itrf93.tf",
         "file_meta": "SPICE kernel directs the SPICE system to associate the IERS terrestrial reference frame ITRF93 with the Earth",
         "remote_sources": [
@@ -280,7 +280,7 @@
         "check_frequency": "3 months"
     },
     "moon_080317.tf": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "moon_080317.tf",
         "file_meta": "SPICE kernel specifies lunar body-fixed reference frames. See comments in file.",
         "remote_sources": [
@@ -293,7 +293,7 @@
         "check_frequency": "3 months"
     },
     "moon_assoc_me.tf": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "moon_assoc_me.tf",
         "file_meta": "SPICE kernel to associate the Moon to the Mean Earth (ME) Frame. See comments in file.",
         "remote_sources": [
@@ -306,7 +306,7 @@
         "check_frequency": "3 months"
     },
     "moon_pa_de421_1900-2050.bpc": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "moon_pa_de421_1900-2050.bpc",
         "file_meta": "High precision lunar orientation SPICE kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/moon_pa_de421_1900-2050.cmt",
         "remote_sources": [
@@ -319,7 +319,7 @@
         "check_frequency": "3 months"
     },
     "latest_leapseconds.tls": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "latest_leapseconds.tls",
         "file_meta": "Leapseconds added since 1972 SPICE kernel. See comments in file.",
         "remote_sources": [
@@ -332,7 +332,7 @@
         "check_frequency": "3 months"
     },
     "pck00010.tpc": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "pck00010.tpc",
         "file_meta": "Body size/shape for natural bodies SPICE kernel. See comments in file.",
         "remote_sources": [
@@ -345,7 +345,7 @@
         "check_frequency": "3 months"
     },
     "pck00011.tpc": {
-        "path": "environment/ephemerides/spice",
+        "path": "environment/ephemeris/spice",
         "filenames": "pck00011.tpc",
         "file_meta": "Body size/shape for natural bodies SPICE kernel. See comments in file.",
         "remote_sources": [
