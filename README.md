@@ -70,8 +70,8 @@ When running any Open Space Toolkit library, we can then target this repo to fet
 
 The OSTk Data repo acts as a GET-only REST API. It is versioned by using named git branches. Current versions are:
 
-- V0 (ref: `main`)
-- V1 (ref: `v1`)
+- V0 (ref: `main`) [used with OSTk Physics < V5.1]
+- V1 (ref: `v1`) [used with OSTk Physics >= V5.1]
 
 And you can query data from different versions using URLs formatted in the following way:
 
