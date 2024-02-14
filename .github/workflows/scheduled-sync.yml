@@ -41,7 +41,7 @@ jobs:
           echo "value=${project_version}" >> $GITHUB_OUTPUT
 
   sync-data-v0:
-    name: Sync data with remote sources (API V0)
+    name: Data Sync (API V0)
     runs-on: ubuntu-latest
     needs:
       - prepare-environment
@@ -69,7 +69,7 @@ jobs:
 
 
   sync-data-v1:
-    name: Sync data with remote sources (API V1)
+    name: Data Sync (API V1)
     runs-on: ubuntu-latest
     needs:
       - prepare-environment
