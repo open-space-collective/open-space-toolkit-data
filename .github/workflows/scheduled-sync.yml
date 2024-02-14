@@ -27,6 +27,7 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+          ref: ${{ github.ref }}
       - id: project-name
         name: Get Project Name
         run: |
@@ -50,6 +51,7 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+          ref: ${{ github.ref }}
       - name: Pull Data
         run: make pull-data
       - name: Commit Changes
