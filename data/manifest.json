@@ -3,7 +3,7 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2024-02-13T20:23:39.982069",
+        "last_update": "2023-02-13T20:23:39.982069",
         "next_update_check": "2024-02-14T02:23:39.982109",
         "check_frequency": "6 hours"
     },
@@ -31,7 +31,7 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2024-02-09T01:35:13.001648",
+        "last_update": "2023-02-09T01:35:13.001648",
         "next_update_check": "2024-02-14T13:23:20.616816",
         "check_frequency": "1 day"
     },
