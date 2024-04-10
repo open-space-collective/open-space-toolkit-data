@@ -9,10 +9,9 @@ on:
         description: The branch name to sync.
         required: true
         type: string
-  workflow_dispatch:
 
 concurrency:
-  group: main-${{ github.ref }}
+  group: main-${{ inputs.api_ref }}
   cancel-in-progress: true
 
 jobs:
