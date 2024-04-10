@@ -77,6 +77,10 @@ jobs:
             ${{ env.FILES_TO_UPDATE }}
           sparse-checkout-cone-mode: false
 
+      - name: List Files
+        run: |
+          echo "Checked out the following files for update:\n"
+          find data -type f
       - name: Pull Data
         run: make pull-data
 
