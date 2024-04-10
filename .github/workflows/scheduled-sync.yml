@@ -77,7 +77,7 @@ jobs:
           lfs: true
           ref: main
           sparse-checkout: |
-            ${{ FILES_TO_UPDATE }}
+            ${{ env.FILES_TO_UPDATE }}
           sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
