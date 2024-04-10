@@ -1,2 +1,5 @@
 # Temporary working versions for files
 *next*
+
+# Ignore Python compiled files
+__pycache__/
