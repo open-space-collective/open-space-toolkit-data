@@ -36,6 +36,7 @@ jobs:
             make determine-updates
             echo EOF
           } >> "$GITHUB_ENV"
+          echo "Files to Update: ${{env.FILES_TO_UPDATE}}"
       - name: Checkout Files to Update
         if: ${{ env.FILES_TO_UPDATE }} != ''
         uses: actions/checkout@v4
