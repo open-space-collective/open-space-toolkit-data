@@ -60,8 +60,8 @@ jobs:
           echo "::set-output name=data::$OUTPUT"
 
       - name: Change ownership of __pycache__ directories
-        run: sudo chown -R $(whoami) ./**/__pycache__
-        
+        run: sudo chown -R $(whoami) /home/runner/work/open-space-toolkit-data/open-space-toolkit-data/__pycache__/downloader.cpython-311.pyc
+
       - name: Checkout Files to Update
         uses: actions/checkout@v4
         with:
