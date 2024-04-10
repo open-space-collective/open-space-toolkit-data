@@ -8,3 +8,6 @@ RUN apt update && apt install -y vim \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install durations
+
+# Set the environment variable to not write .pyc files
+ENV PYTHONDONTWRITEBYTECODE=1

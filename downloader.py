@@ -10,8 +10,15 @@ from pathlib import Path
 import shutil
 from durations import Duration
 
+DATA_PREFIX = "data/"
+MANIFEST_FILE_LOCATION = DATA_PREFIX + "manifest.json"
 
 def set_update_timestamps(descriptor: dict, updated: bool):
+    '''
+        Increment the `next_update_check` timestamp in the descriptor by it's `check_frequency`.
+
+        Returns the updated descriptor.
+    '''
     # set latest update time to now if updated
     if updated:
         descriptor["last_update"] = (
@@ -29,7 +36,14 @@ def set_update_timestamps(descriptor: dict, updated: bool):
     return descriptor
 
 
-def download_check_and_update(descriptor):
+def download_check_and_update(descriptor: dict) -> dict:
+    '''
+        Download the resource described in `descriptor`. 
+
+        If another version of this file already exists locally, determine if the newly downloaded file is different and update accordingly.
+
+        Returns the updated descriptor.
+    '''
     data_folder = Path("data") / Path(descriptor["path"])
 
     # Create data folder if it doesn't exist
@@ -79,6 +93,11 @@ def download_check_and_update(descriptor):
 
 
 def compare_files_and_update(current_dir, new_dir, filename):
+    '''
+        Compare two files with the same name in different directories.
+
+        If there are differences, move the file from `new_dir` to `current_dir` and return True.
+    '''
     current_file = current_dir / filename
     new_file = new_dir / filename
 
@@ -107,6 +126,9 @@ def unpack(compressed_file):
 
 
 def flatten(root_directory):
+    '''
+        Move all files in subdirectories of `root_directory` to the root of `root_directory`.
+    '''
     all_subfiles = [
         path_object
         for path_object in root_directory.rglob("*")
@@ -118,56 +140,116 @@ def flatten(root_directory):
         file.rename(new_path)
 
 
-def main():
-    with open("data/manifest.json") as manifest_file:
-        manifest = json.load(manifest_file)
+def determine_data_to_update(manifest) -> list[str]:
+    '''
+        Loop through the manifest entries and determine if the update frequency
+        has been reached for any data file.
 
-    force_check_pattern = sys.argv[1] if len(sys.argv) > 1 else None
+        If a force_update_pattern is provided, return any data entries with a name containing that pattern.
 
-    # Use manifest check frequency as a global throttle on checking for updates.
-    manifest_next_update_check_dt = datetime.fromisoformat(
-        manifest["manifest"]["next_update_check"]
-    )
+        Returns a list of data entries to check for updates.
+    '''
 
-    if (
-        manifest_next_update_check_dt.replace(tzinfo=timezone.utc)
-        > datetime.now(timezone.utc)
-        and force_check_pattern is None
-    ):
-        print("Global update frequency not yet reached. Nothing to do.")
-        return
+    files_to_fetch = []
 
     for resource, descriptor in manifest.items():
+
         if resource == "manifest":
-            # Just log a manifest update. Nothing to try and download.
-            print("Updating manifest timestamps.")
-            manifest["manifest"] = set_update_timestamps(
-                descriptor=manifest["manifest"], updated=True
-            )
             continue
 
+        # The time at which we have planned to check for updates on this data.
         next_update_check_dt = datetime.fromisoformat(descriptor["next_update_check"])
-
-        force_check = (
-            force_check_pattern is not None and force_check_pattern in resource
-        )
 
         if (
             next_update_check_dt.replace(tzinfo=timezone.utc)
             < datetime.now(timezone.utc)
-            or force_check
         ):
-            print(f"Fetching {resource} to check for updates...")
-            manifest[resource] = download_check_and_update(descriptor)
+            files_to_fetch.append(resource)
+
+    return files_to_fetch
+ 
+def update_resources(manifest: dict, resources_to_update: list[str]) -> dict:
+    '''
+        Fetch all resources in resources_to_update. These must be keys of `manifest`.
+
+        Update any resources that have changes.
+    '''
+
+    if not set(resources_to_update).issubset(set(manifest.keys())):
+        raise ValueError("The resource to update must match a key in the manifest.")
+
+    for resource_name in manifest.keys():
+        if resource_name == "manifest":
+            continue
+        if resource_name in resources_to_update:
+            print(f"Fetching {resource_name} to check for updates...")
+            manifest[resource_name] = download_check_and_update(manifest[resource_name])
 
         else:
-            print(f"Not checking {resource}.")
+            next_update_check_dt = datetime.fromisoformat(
+                manifest[resource_name]["next_update_check"]
+            )
+
+            print(f"Not checking {resource_name}.")
             print(
                 f"  > Next check in {(next_update_check_dt.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc))}."
             )
 
-    with open("data/manifest.json", "w") as manifest_file:
+    return manifest
+    
+def global_update_frequency_reached(manifest: dict) -> bool:
+    # Use manifest check frequency as a global throttle on updating.
+    manifest_next_update_check_dt = datetime.fromisoformat(
+        manifest["manifest"]["next_update_check"]
+    ).replace(tzinfo=timezone.utc)
+
+    return manifest_next_update_check_dt < datetime.now(timezone.utc)
+
+def log_manifest_update(manifest: dict) -> dict:
+    # Log an update for the manifest itself.
+    print("Logging manifest update.")
+    manifest["manifest"] = set_update_timestamps(
+        descriptor=manifest["manifest"], updated=True
+    )
+    return manifest
+
+# TODO make a CLI command
+def determine_update_names() -> list[str]:
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
+        manifest = json.load(manifest_file)
+
+    if not global_update_frequency_reached(manifest):
+        return []
+
+    return determine_data_to_update(manifest)
+
+# TODO make a CLI command
+def determine_update_paths() -> list[str]:
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
+        manifest = json.load(manifest_file)
+
+    names = determine_update_names()
+
+    return [DATA_PREFIX + manifest[resource_name]["path"] + '/' for resource_name in names]
+
+# TODO make a CLI command
+def update(resources_to_update: list[str]):
+    '''
+        Update all resources with names in `resources_to_update`.
+    '''
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
+        manifest = json.load(manifest_file)
+
+    manifest = update_resources(manifest, resources_to_update)
+
+    manifest = log_manifest_update(manifest)
+
+    with open(MANIFEST_FILE_LOCATION, "w") as manifest_file:
         json.dump(manifest, manifest_file, indent=4)
+
+def main():
+    resources_to_update: list[str] = determine_update_names()
+    update(resources_to_update)
 
 
 if __name__ == "__main__":
