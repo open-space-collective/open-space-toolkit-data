@@ -55,6 +55,7 @@ jobs:
           sparse-checkout: |
             data/manifest.json
       - name: Determine Updates
+        id: determine_updates
         run: |
           OUTPUT=$(make determine-updates)
           echo "::set-output name=data::$OUTPUT"
@@ -69,7 +70,7 @@ jobs:
           lfs: true
           ref: main
           sparse-checkout: |
-            ${{ steps.pull_data.outputs.data }}"
+            ${{ steps.determine_updates.outputs.data }}"
           sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
