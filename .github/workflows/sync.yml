@@ -36,6 +36,14 @@ jobs:
             make determine-updates
             echo EOF
           } >> "$GITHUB_ENV"
+
+      - name: List Files
+        run: |
+          echo "Found the following that need updated: ${{ env.FILES_TO_UPDATE }}"
+
+      -name: Early Exit
+        if: ${{ env.FILES_TO_UPDATE }} == ''
+        run: echo "Nothing to Update"
       - name: Checkout Files to Update
         uses: actions/checkout@v4
         with:
