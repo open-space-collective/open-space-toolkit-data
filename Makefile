@@ -26,7 +26,7 @@ start-development dev: build
 .PHONY: start-development
 
 
-determine-updates build:
+determine-updates: build
 	@ echo "Determining updates..."
 
 	docker run \
