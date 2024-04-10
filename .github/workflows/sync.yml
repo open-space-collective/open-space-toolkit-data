@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Found the following that need updated: ${{ env.FILES_TO_UPDATE }}"
 
-      -name: Early Exit
+      - name: Early Exit
         if: ${{ env.FILES_TO_UPDATE }} == ''
         run: echo "Nothing to Update"
       - name: Checkout Files to Update
