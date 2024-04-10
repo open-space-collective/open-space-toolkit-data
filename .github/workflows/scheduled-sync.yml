@@ -69,6 +69,7 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
+
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

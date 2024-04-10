@@ -37,6 +37,9 @@ determine-updates:
 		"open-space-toolkit-data:latest" \
 		/bin/bash -c "python3.11 -c \"from downloader import determine_updates; print(','.join(determine_updates()))\" | tr ',' '\n'"
 
+.PHONY: determine-updates
+
+
 pull-data: build
 	@ echo "Pulling new data from remotes..."
 
