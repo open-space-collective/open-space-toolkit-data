@@ -10,8 +10,8 @@ from pathlib import Path
 import shutil
 from durations import Duration
 
-
-MANIFEST_FILE_LOCATION = "data/manifest.json"
+DATA_PREFIX = "data/"
+MANIFEST_FILE_LOCATION = DATA_PREFIX + "manifest.json"
 
 def set_update_timestamps(descriptor: dict, updated: bool):
     '''
@@ -214,7 +214,7 @@ def log_manifest_update(manifest: dict) -> dict:
     return manifest
 
 # TODO make a CLI command
-def determine_updates() -> list[str]:
+def determine_update_names() -> list[str]:
     with open(MANIFEST_FILE_LOCATION) as manifest_file:
         manifest = json.load(manifest_file)
 
@@ -223,7 +223,20 @@ def determine_updates() -> list[str]:
 
     return determine_data_to_update(manifest)
 
-def update(resources_to_update):
+# TODO make a CLI command
+def determine_update_paths() -> list[str]:
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
+        manifest = json.load(manifest_file)
+
+    names = determine_update_names()
+
+    return [DATA_PREFIX + manifest[resource_name]["path"] for resource_name in names]
+
+# TODO make a CLI command
+def update(resources_to_update: list[str]):
+    '''
+        Update all resources with names in `resources_to_update`.
+    '''
     with open(MANIFEST_FILE_LOCATION) as manifest_file:
         manifest = json.load(manifest_file)
 
@@ -235,7 +248,7 @@ def update(resources_to_update):
         json.dump(manifest, manifest_file, indent=4)
 
 def main():
-    resources_to_update: list[str] = determine_updates()
+    resources_to_update: list[str] = determine_update_names()
     update(resources_to_update)
 
 

@@ -31,7 +31,7 @@ determine-updates:
 		--volume="$(CURDIR):/app:delegated" \
 		--workdir="/app" \
 		"open-space-toolkit-data:latest" \
-		/bin/bash -c "python3.11 -c \"from downloader import determine_updates; print('\n'.join(determine_updates()))\""
+		/bin/bash -c "python3.11 -c \"from downloader import determine_update_paths; print('\n'.join(determine_update_paths()))\""
 
 .PHONY: determine-updates
 

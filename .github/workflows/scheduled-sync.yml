@@ -54,7 +54,7 @@ jobs:
           ref: main
           sparse-checkout: |
             data/manifest.json
-            
+
       - name: Build Docker Image
         run: make build
 
@@ -74,7 +74,7 @@ jobs:
           lfs: true
           ref: main
           sparse-checkout: |
-            ${{ steps.determine_updates.outputs.data }}"
+            ${{ steps.determine_updates.outputs.data }}
           sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
