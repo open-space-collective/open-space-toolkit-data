@@ -230,7 +230,7 @@ def determine_update_paths() -> list[str]:
 
     names = determine_update_names()
 
-    return [DATA_PREFIX + manifest[resource_name]["path"] for resource_name in names]
+    return [DATA_PREFIX + manifest[resource_name]["path"] + '/' for resource_name in names]
 
 # TODO make a CLI command
 def update(resources_to_update: list[str]):
