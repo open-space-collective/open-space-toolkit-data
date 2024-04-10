@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0
           with:
             sparse-checkout: |
-            .
+              .
           ref: ${{ github.ref }}
       - id: project-name
         name: Get Project Name
