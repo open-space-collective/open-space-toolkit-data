@@ -54,6 +54,10 @@ jobs:
           ref: main
           sparse-checkout: |
             data/manifest.json
+            
+      - name: Build Docker Image
+        run: make build
+
       - name: Determine Updates
         id: determine_updates
         run: |
