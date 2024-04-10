@@ -62,7 +62,7 @@ jobs:
         id: determine_updates
         run: |
           OUTPUT=$(make determine-updates)
-          echo "::set-output name=data::$OUTPUT"
+          echo "data=$OUTPUT" >> $GITHUB_OUTPUT
 
       - name: Remove __pycache__ directories
         run: sudo rm -rf /home/runner/work/open-space-toolkit-data/open-space-toolkit-data/__pycache__/downloader.cpython-311.pyc
