@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2024-04-10T20:25:47.178280",
-        "next_update_check": "2024-04-11T21:46:09.847850",
+        "next_update_check": "2024-04-09T21:46:09.847850",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -48,7 +48,7 @@
             }
         ],
         "last_update": "2024-04-10T20:25:48.220442",
-        "next_update_check": "2024-04-17T21:46:11.606903",
+        "next_update_check": "2024-04-09T21:46:11.606903",
         "check_frequency": "1 week"
     },
     "earth-gravity-EGM84": {
