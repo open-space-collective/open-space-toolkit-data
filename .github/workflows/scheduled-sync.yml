@@ -61,8 +61,11 @@ jobs:
       - name: Determine Updates
         id: determine_updates
         run: |
-          OUTPUT=$(make determine-updates)
-          echo "data=$OUTPUT" >> $GITHUB_OUTPUT
+          {
+            echo 'FILES_TO_UPDATE<<EOF' 
+            make determine-updates
+            echo EOF
+          } >> "$GITHUB_ENV"
 
       - name: Remove __pycache__ directories
         run: sudo rm -rf /home/runner/work/open-space-toolkit-data/open-space-toolkit-data/__pycache__/downloader.cpython-311.pyc
@@ -74,7 +77,7 @@ jobs:
           lfs: true
           ref: main
           sparse-checkout: |
-            ${{ steps.determine_updates.outputs.data }}
+            $FILES_TO_UPDATE
           sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
