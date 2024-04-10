@@ -45,7 +45,6 @@ jobs:
           lfs: true
           ref: ${{inputs.api_ref}}
           sparse-checkout: |
-            data/manifest.json
             ${{ env.FILES_TO_UPDATE }}
           sparse-checkout-cone-mode: false
       - name: List Files
