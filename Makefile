@@ -25,6 +25,18 @@ start-development dev: build
 
 .PHONY: start-development
 
+
+determine-updates:
+	@ echo "Determining updates..."
+
+	docker run \
+		--rm \
+		--privileged \
+		--volume="$(CURDIR):/app:delegated" \
+		--workdir="/app" \
+		"open-space-toolkit-data:latest" \
+		/bin/bash -c "python3.11 -c \"from downloader import determine_updates; print(','.join(determine_updates()))\" | tr ',' '\n'"
+
 pull-data: build
 	@ echo "Pulling new data from remotes..."
 
@@ -36,4 +48,4 @@ pull-data: build
 		"open-space-toolkit-data:latest" \
 		/bin/bash -c "python3.11 /app/downloader.py $(FORCE)"
 
-.PHONY: start-development
+.PHONY: pull-data

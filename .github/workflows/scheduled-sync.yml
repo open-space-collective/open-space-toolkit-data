@@ -46,12 +46,27 @@ jobs:
     needs:
       - prepare-environment
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout Manifest File
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+          sparse-checkout: |
+            data/manifest.json
+          sparse-checkout-cone-mode: false
+      - name: Determine Updates
+        run: |
+          OUTPUT=$(make determine-updates)
+          echo "::set-output name=data::$OUTPUT"
+      - name: Checkout Files to Update
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: true
           ref: main
+          sparse-checkout: |
+            ${{ steps.pull_data.outputs.data }}"
+          sparse-checkout-cone-mode: false
       - name: Pull Data
         run: make pull-data
       - name: Commit Changes

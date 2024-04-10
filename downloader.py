@@ -11,6 +11,8 @@ import shutil
 from durations import Duration
 
 
+MANIFEST_FILE_LOCATION = "data/manifest.json"
+
 def set_update_timestamps(descriptor: dict, updated: bool):
     '''
         Increment the `next_update_check` timestamp in the descriptor by it's `check_frequency`.
@@ -211,24 +213,30 @@ def log_manifest_update(manifest: dict) -> dict:
     )
     return manifest
 
-def main():
-
-    force_update_pattern = sys.argv[1] if len(sys.argv) > 1 else None
-
-    with open("data/manifest.json") as manifest_file:
+# TODO make a CLI command
+def determine_updates() -> list[str]:
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
         manifest = json.load(manifest_file)
 
     if not global_update_frequency_reached(manifest):
-        print("Global update frequency not yet reached. Nothing to do.")
-        return
+        return []
 
-    resources_to_update: list[str] = determine_data_to_update(manifest)
-    manifest: dict = update_resources(manifest, resources_to_update)
+    return determine_data_to_update(manifest)
 
-    manifest: dict = log_manifest_update(manifest)
+def update(resources_to_update):
+    with open(MANIFEST_FILE_LOCATION) as manifest_file:
+        manifest = json.load(manifest_file)
 
-    with open("data/manifest.json", "w") as manifest_file:
+    manifest = update_resources(manifest, resources_to_update)
+
+    manifest = log_manifest_update(manifest)
+
+    with open(MANIFEST_FILE_LOCATION, "w") as manifest_file:
         json.dump(manifest, manifest_file, indent=4)
+
+def main():
+    resources_to_update: list[str] = determine_updates()
+    update(resources_to_update)
 
 
 if __name__ == "__main__":
