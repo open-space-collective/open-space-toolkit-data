@@ -237,12 +237,15 @@ def update(resources_to_update: list[str]):
     '''
         Update all resources with names in `resources_to_update`.
     '''
+
+
     with open(MANIFEST_FILE_LOCATION) as manifest_file:
         manifest = json.load(manifest_file)
 
     manifest = update_resources(manifest, resources_to_update)
 
-    manifest = log_manifest_update(manifest)
+    if global_update_frequency_reached(manifest):
+        manifest = log_manifest_update(manifest)
 
     with open(MANIFEST_FILE_LOCATION, "w") as manifest_file:
         json.dump(manifest, manifest_file, indent=4)
