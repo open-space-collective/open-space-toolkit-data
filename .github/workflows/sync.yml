@@ -38,7 +38,7 @@ jobs:
           } >> "$GITHUB_ENV"
           echo "Files to Update: ${{env.FILES_TO_UPDATE}}"
       - name: Checkout Files to Update
-        if: ${{ env.FILES_TO_UPDATE }} != ''
+        if: contains(env.FILES_TO_UPDATE,'/')
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
