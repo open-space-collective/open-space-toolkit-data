@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2024-05-17T23:23:11.067349",
-        "next_update_check": "2024-05-18T05:23:11.067372",
+        "last_update": "2024-05-18T05:23:48.683975",
+        "next_update_check": "2024-05-18T11:23:48.684000",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -16,7 +16,7 @@
             }
         ],
         "last_update": "2024-05-17T23:23:11.067163",
-        "next_update_check": "2024-05-18T05:23:11.067231",
+        "next_update_check": "2024-05-18T11:23:48.683860",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
