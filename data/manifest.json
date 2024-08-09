@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2024-08-09T12:28:54.289105",
-        "next_update_check": "2024-08-09T18:28:54.289126",
+        "last_update": "2024-08-09T19:21:38.284613",
+        "next_update_check": "2024-08-10T01:21:38.284662",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2024-08-09T12:28:53.129998",
-        "next_update_check": "2024-08-09T18:28:53.130075",
+        "last_update": "2024-08-09T19:21:19.238502",
+        "next_update_check": "2024-08-10T01:21:19.238560",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -64,7 +64,7 @@
             }
         ],
         "last_update": "2023-08-08T21:16:23.624018",
-        "next_update_check": "2024-08-09T18:31:54.256711",
+        "next_update_check": "2025-08-10T19:21:21.693703",
         "check_frequency": "1 year"
     },
     "earth-gravity-EGM96": {
@@ -80,7 +80,7 @@
             }
         ],
         "last_update": "2023-08-08T21:16:25.736569",
-        "next_update_check": "2024-08-09T18:31:57.083514",
+        "next_update_check": "2025-08-10T19:21:23.399952",
         "check_frequency": "1 year"
     },
     "earth-gravity-EGM2008": {
@@ -96,7 +96,7 @@
             }
         ],
         "last_update": "2023-07-20T23:44:56.205478",
-        "next_update_check": "2024-08-09T19:21:13.299287",
+        "next_update_check": "2025-02-08T19:21:32.445319",
         "check_frequency": "6 months"
     },
     "earth-gravity-WGS84": {
@@ -112,7 +112,7 @@
             }
         ],
         "last_update": "2023-07-20T23:50:57.896642",
-        "next_update_check": "2024-08-09T19:21:13.845036",
+        "next_update_check": "2025-02-08T19:21:33.932773",
         "check_frequency": "6 months"
     },
     "earth-magnetic-EMM2010": {
@@ -127,8 +127,8 @@
                 "needs_unpack": true
             }
         ],
-        "last_update": "2023-08-09T19:09:05.094014",
-        "next_update_check": "2024-08-09T19:21:16.233640",
+        "last_update": "2024-08-09T19:21:36.802137",
+        "next_update_check": "2025-02-08T19:21:36.802182",
         "check_frequency": "6 months"
     },
     "earth-magnetic-EMM2015": {
@@ -143,8 +143,8 @@
                 "needs_unpack": true
             }
         ],
-        "last_update": "2023-08-09T19:09:06.594782",
-        "next_update_check": "2024-08-09T19:21:18.005420",
+        "last_update": "2024-08-09T19:21:38.284494",
+        "next_update_check": "2025-02-08T19:21:38.284534",
         "check_frequency": "6 months"
     },
     "earth-magnetic-EMM2017": {
