@@ -243,14 +243,27 @@
     "earth_200101_990825_predict.bpc": {
         "path": "environment/ephemerides/spice",
         "filenames": "earth_200101_990825_predict.bpc",
-        "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
+        "file_meta": "[Superceded by earth_200101_990827_predict.bpc; This entry is no longer updated.] Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
         "remote_sources": [
             {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.bpc"
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/a_old_versions/earth_200101_990825_predict.bpc"
             }
         ],
         "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2024-10-27T23:21:10.301406",
+        "next_update_check": "2024-10-27T23:21:14.328295",
+        "check_frequency": "3 months"
+    },
+    "earth_200101_990827_predict.bpc": {
+        "path": "environment/ephemerides/spice",
+        "filenames": "earth_200101_990827_predict.bpc",
+        "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.cmt",
+        "remote_sources": [
+            {
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.bpc"
+            }
+        ],
+        "last_update": "2023-07-20T21:16:55.491918",
+        "next_update_check": "2024-10-27T23:21:14.328295",
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
