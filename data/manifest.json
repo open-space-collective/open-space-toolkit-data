@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2024-11-08T02:38:59.179488",
-        "next_update_check": "2024-11-08T08:38:59.179510",
+        "last_update": "2024-11-08T09:25:25.850462",
+        "next_update_check": "2024-11-08T15:25:25.850481",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2024-11-08T02:38:59.179308",
-        "next_update_check": "2024-11-08T08:38:59.179379",
+        "last_update": "2024-11-08T09:25:23.121462",
+        "next_update_check": "2024-11-08T15:25:23.121534",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -31,8 +31,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2024-11-01T17:37:36.051136",
-        "next_update_check": "2024-11-08T07:23:36.495332",
+        "last_update": "2024-11-08T09:25:25.430082",
+        "next_update_check": "2024-11-09T09:25:25.430146",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -275,8 +275,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2024-08-08T16:26:44.899125",
-        "next_update_check": "2024-11-08T04:26:44.899192",
+        "last_update": "2024-11-08T09:25:25.681848",
+        "next_update_check": "2025-02-07T21:25:25.681908",
         "check_frequency": "3 months"
     },
     "earth_assoc_itrf93.tf": {
@@ -367,7 +367,7 @@
             }
         ],
         "last_update": "2023-08-04T23:09:52.388112",
-        "next_update_check": "2024-11-08T04:26:45.055036",
+        "next_update_check": "2025-02-07T21:25:25.850437",
         "check_frequency": "3 months"
     }
 }
