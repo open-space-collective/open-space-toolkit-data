@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2025-02-08T23:24:13.609865",
-        "next_update_check": "2025-02-09T05:24:13.609886",
+        "last_update": "2025-02-09T05:25:04.455097",
+        "next_update_check": "2025-02-09T11:25:04.455117",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2025-02-08T23:23:58.872115",
-        "next_update_check": "2025-02-09T05:23:58.872180",
+        "last_update": "2025-02-09T05:24:56.762199",
+        "next_update_check": "2025-02-09T11:24:56.762266",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -160,7 +160,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:09.232154",
-        "next_update_check": "2025-02-09T01:45:38.745070",
+        "next_update_check": "2025-08-11T05:24:58.761737",
         "check_frequency": "6 months"
     },
     "earth-magnetic-IGRF11": {
@@ -176,7 +176,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:10.247740",
-        "next_update_check": "2025-02-09T01:45:40.059815",
+        "next_update_check": "2025-08-11T05:25:00.041897",
         "check_frequency": "6 months"
     },
     "earth-magnetic-IGRF12": {
@@ -192,7 +192,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:12.200373",
-        "next_update_check": "2025-02-09T01:45:41.736981",
+        "next_update_check": "2025-08-11T05:25:01.718270",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2010": {
@@ -208,7 +208,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:14.249682",
-        "next_update_check": "2025-02-09T01:45:43.947031",
+        "next_update_check": "2025-08-11T05:25:02.901748",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2015": {
@@ -224,7 +224,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:16.237548",
-        "next_update_check": "2025-02-09T01:45:45.723975",
+        "next_update_check": "2025-08-11T05:25:04.455028",
         "check_frequency": "6 months"
     },
     "de430.bsp": {
