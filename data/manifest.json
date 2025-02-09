@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2025-02-08T23:24:15.599743",
-        "next_update_check": "2025-02-09T05:24:15.599763",
+        "last_update": "2025-02-09T05:25:06.721727",
+        "next_update_check": "2025-02-09T11:25:06.721748",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2025-02-08T23:23:58.803196",
-        "next_update_check": "2025-02-09T05:23:58.803257",
+        "last_update": "2025-02-09T05:25:03.336324",
+        "next_update_check": "2025-02-09T11:25:03.336393",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -192,7 +192,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:12.200373",
-        "next_update_check": "2025-02-09T01:45:17.127471",
+        "next_update_check": "2025-08-11T05:25:04.521420",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2010": {
@@ -208,7 +208,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:14.249682",
-        "next_update_check": "2025-02-09T01:45:18.619252",
+        "next_update_check": "2025-08-11T05:25:05.682014",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2015": {
@@ -224,7 +224,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:16.237548",
-        "next_update_check": "2025-02-09T01:45:20.578546",
+        "next_update_check": "2025-08-11T05:25:06.721664",
         "check_frequency": "6 months"
     },
     "de430.bsp": {
