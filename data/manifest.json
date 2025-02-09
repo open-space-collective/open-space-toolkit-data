@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2025-02-09T12:28:17.973608",
-        "next_update_check": "2025-02-09T18:28:17.973630",
+        "last_update": "2025-02-09T19:21:43.917625",
+        "next_update_check": "2025-02-10T01:21:43.917645",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2025-02-09T12:28:17.973431",
-        "next_update_check": "2025-02-09T18:28:17.973496",
+        "last_update": "2025-02-09T19:21:40.349259",
+        "next_update_check": "2025-02-10T01:21:40.349327",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -47,8 +47,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2025-02-02T17:24:08.828159",
-        "next_update_check": "2025-02-09T17:24:08.828226",
+        "last_update": "2025-02-09T19:21:43.917466",
+        "next_update_check": "2025-02-16T19:21:43.917525",
         "check_frequency": "1 week"
     },
     "earth-gravity-EGM84": {
