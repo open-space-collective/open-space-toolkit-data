@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2025-08-11T01:58:03.885380",
-        "next_update_check": "2025-08-11T07:58:03.885403",
+        "last_update": "2025-08-11T08:28:32.256963",
+        "next_update_check": "2025-08-11T14:28:32.256982",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2025-08-11T01:57:49.562885",
-        "next_update_check": "2025-08-11T07:57:49.562956",
+        "last_update": "2025-08-11T08:28:24.065516",
+        "next_update_check": "2025-08-11T14:28:24.065585",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2025-08-08T01:57:53.996097",
-        "next_update_check": "2025-08-11T05:27:19.073139",
+        "next_update_check": "2025-08-12T08:28:24.629966",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -192,7 +192,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:12.200373",
-        "next_update_check": "2025-08-11T05:25:04.521420",
+        "next_update_check": "2026-02-10T08:28:29.918654",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2010": {
@@ -208,7 +208,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:14.249682",
-        "next_update_check": "2025-08-11T05:25:05.682014",
+        "next_update_check": "2026-02-10T08:28:31.043776",
         "check_frequency": "6 months"
     },
     "earth-magnetic-WMM2015": {
@@ -224,7 +224,7 @@
             }
         ],
         "last_update": "2023-08-09T19:09:16.237548",
-        "next_update_check": "2025-08-11T05:25:06.721664",
+        "next_update_check": "2026-02-10T08:28:32.256895",
         "check_frequency": "6 months"
     },
     "de430.bsp": {
