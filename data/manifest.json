@@ -256,10 +256,10 @@
     "earth_200101_990827_predict.bpc": {
         "path": "environment/ephemeris/spice",
         "filenames": "earth_200101_990827_predict.bpc",
-        "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.cmt",
+        "file_meta": "[Superceded by earth_2025_250826_2125_predict.bpc; This entry is no longer updated.] Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.cmt",
         "remote_sources": [
             {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.bpc"
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/a_old_versions/earth_200101_990827_predict.bpc"
             }
         ],
         "last_update": "2024-11-01T17:28:49.417019",
