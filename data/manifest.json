@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2025-11-02T23:24:32.247586",
-        "next_update_check": "2025-11-03T05:24:32.247607",
+        "last_update": "2025-11-12T18:28:48.003136",
+        "next_update_check": "2025-11-13T00:28:48.003153",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2025-11-02T23:24:32.247419",
-        "next_update_check": "2025-11-03T05:24:32.247481",
+        "last_update": "2025-11-12T18:28:40.488035",
+        "next_update_check": "2025-11-13T00:28:40.488112",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -31,8 +31,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2025-10-31T02:48:37.214374",
-        "next_update_check": "2025-11-03T09:25:11.825751",
+        "last_update": "2025-11-12T18:28:42.904218",
+        "next_update_check": "2025-11-13T18:28:42.904283",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -47,8 +47,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2025-11-02T09:25:17.692737",
-        "next_update_check": "2025-11-09T09:25:17.692796",
+        "last_update": "2025-11-12T18:28:44.412106",
+        "next_update_check": "2025-11-19T18:28:44.412169",
         "check_frequency": "1 week"
     },
     "earth-gravity-EGM84": {
@@ -250,7 +250,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2025-11-03T03:27:09.366290",
+        "next_update_check": "2026-02-12T06:28:44.929852",
         "check_frequency": "3 months"
     },
     "earth_200101_990827_predict.bpc": {
@@ -263,7 +263,7 @@
             }
         ],
         "last_update": "2024-11-01T17:28:49.417019",
-        "next_update_check": "2025-11-03T03:27:09.585437",
+        "next_update_check": "2026-02-12T06:28:45.565443",
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
@@ -275,8 +275,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2025-08-10T05:27:19.229608",
-        "next_update_check": "2025-11-09T17:27:19.229670",
+        "last_update": "2025-11-12T18:28:46.109054",
+        "next_update_check": "2026-02-12T06:28:46.109119",
         "check_frequency": "3 months"
     },
     "earth_assoc_itrf93.tf": {
@@ -289,7 +289,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:58.612582",
-        "next_update_check": "2025-11-03T03:27:09.680564",
+        "next_update_check": "2026-02-12T06:28:46.302993",
         "check_frequency": "3 months"
     },
     "moon_080317.tf": {
@@ -302,7 +302,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:59.758096",
-        "next_update_check": "2025-11-03T03:27:09.779758",
+        "next_update_check": "2026-02-12T06:28:46.637654",
         "check_frequency": "3 months"
     },
     "moon_assoc_me.tf": {
@@ -315,7 +315,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:00.785883",
-        "next_update_check": "2025-11-03T03:27:09.881785",
+        "next_update_check": "2026-02-12T06:28:46.830511",
         "check_frequency": "3 months"
     },
     "moon_pa_de421_1900-2050.bpc": {
@@ -328,7 +328,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:01.799236",
-        "next_update_check": "2025-11-03T03:27:10.035941",
+        "next_update_check": "2026-02-12T06:28:47.225439",
         "check_frequency": "3 months"
     },
     "latest_leapseconds.tls": {
@@ -341,7 +341,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:02.696112",
-        "next_update_check": "2025-11-03T03:27:10.123080",
+        "next_update_check": "2026-02-12T06:28:47.415512",
         "check_frequency": "3 months"
     },
     "pck00010.tpc": {
@@ -354,7 +354,7 @@
             }
         ],
         "last_update": "2023-07-21T01:02:04.354277",
-        "next_update_check": "2025-11-03T03:27:10.238692",
+        "next_update_check": "2026-02-12T06:28:47.801653",
         "check_frequency": "3 months"
     },
     "pck00011.tpc": {
@@ -367,7 +367,7 @@
             }
         ],
         "last_update": "2023-08-04T23:09:52.388112",
-        "next_update_check": "2025-11-09T17:27:19.767093",
+        "next_update_check": "2026-02-12T06:28:48.003108",
         "check_frequency": "3 months"
     }
 }
