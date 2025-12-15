@@ -277,7 +277,7 @@
         ],
         "last_update": "2025-11-12T18:28:46.109054",
         "next_update_check": "2026-02-12T06:28:46.109119",
-        "check_frequency": "3 months"
+        "check_frequency": "3 days"
     },
     "earth_assoc_itrf93.tf": {
         "path": "environment/ephemeris/spice",
