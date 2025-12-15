@@ -227,43 +227,30 @@
         "next_update_check": "2026-02-10T08:28:32.256895",
         "check_frequency": "6 months"
     },
-    "de430.bsp": {
+    "de440s.bsp": {
         "path": "environment/ephemerides/spice",
-        "filenames": "de430.bsp",
-        "file_meta": "SPICE kernel for planetary ephemeris for all planets in the Solar System (+ Sun + The Moon). See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/aareadme_de430-de431.txt",
+        "filenames": "de440s.bsp",
+        "file_meta": "SPICE kernel for planetary ephemeris for all planets in the Solar System (+ Sun + The Moon). See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/aareadme_de440-de441.txt",
         "remote_sources": [
             {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp"
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp"
             }
         ],
-        "last_update": "2023-07-20T21:16:48.408774",
+        "last_update": "2025-12-15T17:27:39.277705",
         "next_update_check": "2026-07-30T01:58:13.833152",
         "check_frequency": "1 year"
     },
-    "earth_200101_990825_predict.bpc": {
+    "earth_2025_250826_2125_predict.bpc": {
         "path": "environment/ephemerides/spice",
-        "filenames": "earth_200101_990825_predict.bpc",
-        "file_meta": "[Superceded by earth_200101_990827_predict.bpc; This entry is no longer updated.] Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990825_predict.cmt",
+        "filenames": "earth_2025_250826_2125_predict.bpc",
+        "file_meta": "Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_2025_250826_2125_predict.cmt",
         "remote_sources": [
             {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/a_old_versions/earth_200101_990825_predict.bpc"
+                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_2025_250826_2125_predict.bpc"
             }
         ],
-        "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2026-02-12T07:24:33.562947",
-        "check_frequency": "3 months"
-    },
-    "earth_200101_990827_predict.bpc": {
-        "path": "environment/ephemerides/spice",
-        "filenames": "earth_200101_990827_predict.bpc",
-        "file_meta": "[Superceded by earth_2025_250826_2125_predict.bpc; This entry is no longer updated.] Low precision/long horizon earth orientation prediction kernel. See https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_200101_990827_predict.cmt",
-        "remote_sources": [
-            {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/a_old_versions/earth_200101_990827_predict.bpc"
-            }
-        ],
-        "last_update": "2024-11-01T17:37:41.505316",
-        "next_update_check": "2026-02-12T07:24:34.635267",
+        "last_update": "2025-11-12T19:24:35.509108",
+        "next_update_check": "2026-02-12T07:24:35.509166",
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
@@ -277,7 +264,7 @@
         ],
         "last_update": "2025-11-12T19:24:35.509108",
         "next_update_check": "2026-02-12T07:24:35.509166",
-        "check_frequency": "3 months"
+        "check_frequency": "3 days"
     },
     "earth_assoc_itrf93.tf": {
         "path": "environment/ephemerides/spice",
@@ -342,19 +329,6 @@
         ],
         "last_update": "2023-07-20T21:17:02.696112",
         "next_update_check": "2026-02-12T07:24:37.795186",
-        "check_frequency": "3 months"
-    },
-    "pck00010.tpc": {
-        "path": "environment/ephemerides/spice",
-        "filenames": "pck00010.tpc",
-        "file_meta": "Body size/shape for natural bodies SPICE kernel. See comments in file.",
-        "remote_sources": [
-            {
-                "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00010.tpc"
-            }
-        ],
-        "last_update": "2023-07-21T01:02:04.354277",
-        "next_update_check": "2026-02-12T07:24:38.380275",
         "check_frequency": "3 months"
     },
     "pck00011.tpc": {
