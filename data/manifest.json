@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2026-03-25T18:35:45.503680",
-        "next_update_check": "2026-03-26T00:35:45.503703",
+        "last_update": "2026-03-26T01:59:23.040476",
+        "next_update_check": "2026-03-26T07:59:23.040495",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2026-03-25T18:35:45.503493",
-        "next_update_check": "2026-03-26T00:35:45.503565",
+        "last_update": "2026-03-26T01:59:21.401047",
+        "next_update_check": "2026-03-26T07:59:21.401099",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2026-03-20T13:42:00.500056",
-        "next_update_check": "2026-03-25T23:28:55.140870",
+        "next_update_check": "2026-03-27T01:59:22.276617",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -275,8 +275,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2026-03-23T01:59:07.533250",
-        "next_update_check": "2026-03-26T01:59:07.533314",
+        "last_update": "2026-03-26T01:59:23.040399",
+        "next_update_check": "2026-03-29T01:59:23.040435",
         "check_frequency": "3 days"
     },
     "earth_assoc_itrf93.tf": {
