@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2026-05-14T16:58:50.244735",
-        "next_update_check": "2026-05-14T22:58:50.244756",
+        "last_update": "2026-05-14T23:36:46.472172",
+        "next_update_check": "2026-05-15T05:36:46.472187",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2026-05-14T16:58:50.244520",
-        "next_update_check": "2026-05-14T22:58:50.244617",
+        "last_update": "2026-05-14T23:36:42.648856",
+        "next_update_check": "2026-05-15T05:36:42.648927",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -263,7 +263,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2026-05-14T19:37:33.164936",
+        "next_update_check": "2026-08-14T11:36:43.543399",
         "check_frequency": "3 months"
     },
     "earth_200101_990827_predict.bpc": {
@@ -276,7 +276,7 @@
             }
         ],
         "last_update": "2024-11-01T17:28:49.417019",
-        "next_update_check": "2026-05-14T19:37:33.828167",
+        "next_update_check": "2026-08-14T11:36:44.470838",
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
@@ -302,7 +302,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:58.612582",
-        "next_update_check": "2026-05-14T19:37:34.022609",
+        "next_update_check": "2026-08-14T11:36:44.674964",
         "check_frequency": "3 months"
     },
     "moon_080317.tf": {
@@ -315,7 +315,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:59.758096",
-        "next_update_check": "2026-05-14T19:37:34.229727",
+        "next_update_check": "2026-08-14T11:36:44.898698",
         "check_frequency": "3 months"
     },
     "moon_assoc_me.tf": {
@@ -328,7 +328,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:00.785883",
-        "next_update_check": "2026-05-14T19:37:34.574217",
+        "next_update_check": "2026-08-14T11:36:45.082868",
         "check_frequency": "3 months"
     },
     "moon_pa_de421_1900-2050.bpc": {
@@ -341,7 +341,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:01.799236",
-        "next_update_check": "2026-05-14T19:37:34.974817",
+        "next_update_check": "2026-08-14T11:36:45.689550",
         "check_frequency": "3 months"
     },
     "latest_leapseconds.tls": {
@@ -354,7 +354,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:02.696112",
-        "next_update_check": "2026-05-14T19:37:35.283661",
+        "next_update_check": "2026-08-14T11:36:45.873075",
         "check_frequency": "3 months"
     },
     "pck00010.tpc": {
@@ -367,7 +367,7 @@
             }
         ],
         "last_update": "2023-07-21T01:02:04.354277",
-        "next_update_check": "2026-05-14T19:37:35.720321",
+        "next_update_check": "2026-08-14T11:36:46.172067",
         "check_frequency": "3 months"
     },
     "pck00011.tpc": {
@@ -380,7 +380,7 @@
             }
         ],
         "last_update": "2023-08-04T23:09:52.388112",
-        "next_update_check": "2026-05-14T19:37:36.027165",
+        "next_update_check": "2026-08-14T11:36:46.472144",
         "check_frequency": "3 months"
     }
 }
