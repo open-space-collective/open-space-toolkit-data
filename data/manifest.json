@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2026-07-19T14:39:33.867295",
-        "next_update_check": "2026-07-19T20:39:33.867318",
+        "last_update": "2026-07-19T21:35:31.214600",
+        "next_update_check": "2026-07-20T03:35:31.214620",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2026-07-19T14:39:33.867106",
-        "next_update_check": "2026-07-19T20:39:33.867177",
+        "last_update": "2026-07-19T21:35:28.687062",
+        "next_update_check": "2026-07-20T03:35:28.687120",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -47,8 +47,8 @@
                 "meta_": "not updated as often"
             }
         ],
-        "last_update": "2026-07-12T20:32:22.673865",
-        "next_update_check": "2026-07-19T20:32:22.673926",
+        "last_update": "2026-07-19T21:35:30.254045",
+        "next_update_check": "2026-07-26T21:35:30.254094",
         "check_frequency": "1 week"
     },
     "earth-gravity-EGM84": {
@@ -288,8 +288,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2026-07-16T20:35:32.163534",
-        "next_update_check": "2026-07-19T20:35:32.163604",
+        "last_update": "2026-07-19T21:35:31.214515",
+        "next_update_check": "2026-07-22T21:35:31.214558",
         "check_frequency": "3 days"
     },
     "earth_assoc_itrf93.tf": {
