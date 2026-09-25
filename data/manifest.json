@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2026-09-25T11:27:18.846926",
-        "next_update_check": "2026-09-25T17:27:18.846937",
+        "last_update": "2026-09-25T18:32:08.852831",
+        "next_update_check": "2026-09-26T00:32:08.852846",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2026-09-25T11:27:18.193614",
-        "next_update_check": "2026-09-25T17:27:18.193656",
+        "last_update": "2026-09-25T18:32:08.852657",
+        "next_update_check": "2026-09-26T00:32:08.852744",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
