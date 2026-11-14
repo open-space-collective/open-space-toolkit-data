@@ -3,8 +3,8 @@
         "path": "",
         "filenames": "manifest.json",
         "file_meta": "This file. Entry tracks the expected manifest update time on the github so that local OSTk can make smarter pulling decisions.",
-        "last_update": "2026-11-14T05:21:14.383919",
-        "next_update_check": "2026-11-14T11:21:14.383934",
+        "last_update": "2026-11-14T12:24:07.654150",
+        "next_update_check": "2026-11-14T18:24:07.654164",
         "check_frequency": "6 hours"
     },
     "space-weather-CSSI": {
@@ -15,8 +15,8 @@
                 "url": "https://celestrak.org/SpaceData/SW-Last5Years.csv"
             }
         ],
-        "last_update": "2026-11-14T05:21:14.383758",
-        "next_update_check": "2026-11-14T11:21:14.383836",
+        "last_update": "2026-11-14T12:24:03.755045",
+        "next_update_check": "2026-11-14T18:24:03.755110",
         "check_frequency": "6 hours"
     },
     "bulletin-A": {
@@ -32,7 +32,7 @@
             }
         ],
         "last_update": "2026-11-13T10:21:04.788935",
-        "next_update_check": "2026-11-14T10:21:04.788988",
+        "next_update_check": "2026-11-15T12:24:04.652684",
         "check_frequency": "1 day"
     },
     "finals-2000A": {
@@ -263,7 +263,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:55.491918",
-        "next_update_check": "2026-11-14T06:34:38.006344",
+        "next_update_check": "2027-02-14T00:24:05.181722",
         "check_frequency": "3 months"
     },
     "earth_200101_990827_predict.bpc": {
@@ -276,7 +276,7 @@
             }
         ],
         "last_update": "2024-11-01T17:28:49.417019",
-        "next_update_check": "2026-11-14T06:34:39.851992",
+        "next_update_check": "2027-02-14T00:24:05.707456",
         "check_frequency": "3 months"
     },
     "earth_latest_high_prec.bpc": {
@@ -288,8 +288,8 @@
                 "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/earth_latest_high_prec.bpc"
             }
         ],
-        "last_update": "2026-11-11T10:21:01.523731",
-        "next_update_check": "2026-11-14T10:21:01.523793",
+        "last_update": "2026-11-14T12:24:06.128173",
+        "next_update_check": "2026-11-17T12:24:06.128234",
         "check_frequency": "3 days"
     },
     "earth_assoc_itrf93.tf": {
@@ -302,7 +302,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:58.612582",
-        "next_update_check": "2026-11-14T06:34:40.204911",
+        "next_update_check": "2027-02-14T00:24:06.268839",
         "check_frequency": "3 months"
     },
     "moon_080317.tf": {
@@ -315,7 +315,7 @@
             }
         ],
         "last_update": "2023-07-20T21:16:59.758096",
-        "next_update_check": "2026-11-14T06:34:40.653435",
+        "next_update_check": "2027-02-14T00:24:06.475727",
         "check_frequency": "3 months"
     },
     "moon_assoc_me.tf": {
@@ -328,7 +328,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:00.785883",
-        "next_update_check": "2026-11-14T06:34:41.009330",
+        "next_update_check": "2027-02-14T00:24:06.653639",
         "check_frequency": "3 months"
     },
     "moon_pa_de421_1900-2050.bpc": {
@@ -341,7 +341,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:01.799236",
-        "next_update_check": "2026-11-14T06:34:42.127416",
+        "next_update_check": "2027-02-14T00:24:07.012661",
         "check_frequency": "3 months"
     },
     "latest_leapseconds.tls": {
@@ -354,7 +354,7 @@
             }
         ],
         "last_update": "2023-07-20T21:17:02.696112",
-        "next_update_check": "2026-11-14T06:34:42.479341",
+        "next_update_check": "2027-02-14T00:24:07.159469",
         "check_frequency": "3 months"
     },
     "pck00010.tpc": {
@@ -367,7 +367,7 @@
             }
         ],
         "last_update": "2023-07-21T01:02:04.354277",
-        "next_update_check": "2026-11-14T06:34:43.083469",
+        "next_update_check": "2027-02-14T00:24:07.387824",
         "check_frequency": "3 months"
     },
     "pck00011.tpc": {
@@ -380,7 +380,7 @@
             }
         ],
         "last_update": "2023-08-04T23:09:52.388112",
-        "next_update_check": "2026-11-14T06:34:43.654698",
+        "next_update_check": "2027-02-14T00:24:07.654124",
         "check_frequency": "3 months"
     }
 }
